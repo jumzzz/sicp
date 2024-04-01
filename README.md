@@ -2,7 +2,7 @@
 Repository for Structure and Interpretation of Computer Programs 2nd ed
 
 ### Interpreter
-- We will use chezscheme as Scheme Interpreter [Homebrew](https://formulae.brew.sh/formula/chezscheme)
+- We will use `chezscheme` as Scheme Interpreter [Homebrew](https://formulae.brew.sh/formula/chezscheme)
 
 ### Debugging
 - A guide here has some straightforward method of Debugging Scheme scripts [CS Indiana](https://legacy.cs.indiana.edu/ftp/scheme-repository/instruct/wand/plangs/debugging.txt)
