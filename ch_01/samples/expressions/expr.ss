@@ -1,0 +1,12 @@
+( display (+ 137 349) )
+( newline )
+( display (- 1000 334) )
+( newline )
+( display (* 5 99) )
+( newline )
+( display (/ 10 5) )
+( newline )
+( display (+ 2.7 10) )
+( newline )
+
+( exit )
