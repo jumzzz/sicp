@@ -1,0 +1,6 @@
+( define PI 3.141516 )
+( define r 10.0 )
+( display "area: " )
+( display (* (* r r) PI ) )
+( newline )
+( exit )
