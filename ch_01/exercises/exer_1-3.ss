@@ -1,0 +1,6 @@
+( define (square x) (* x x))
+( define (max a b ) (if (> a b ) a b))
+( define (square-sum a b) (+ (square a) (square b)))
+( define (sum-two-square-max a b c) 
+         (max (max (square-sum a b) (square-sum a c)) (square-sum b c))
+)
