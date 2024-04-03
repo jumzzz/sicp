@@ -19,6 +19,7 @@
          ( cond ( predicate then-clause)
                 ( else else-clause )))
 
+; DANGEROUS: Gets into infinite recursive procedure call
 ( define ( sqrt-iter-v2 guess y )
   ( new-if ( good-enough? guess y )
     guess
