@@ -24,7 +24,7 @@ Then hooking this in debugger, this happened:
 | (p)
 ...
 ```
-By observation, the function was stucked on a infinite recursive call.
+By observation, the procedure was stuck on a infinite recursive call.
 
 Now, the question is, given that:
 ```scheme
@@ -42,7 +42,7 @@ Now, the question is, given that:
 **Behavior on Applicative-Order Evaluation:**
 - Applicative-ordering will keep on digging the inner-most arguments.
 - In this case, (p) calls (p) calls (p) calls (p) ...
-- The function will be on **infinite recursive function calls**.
+- The procedure will be on **infinite recursive procedure calls**.
 
 **Behavior on Normal-Order Evaluation:**
 - The interpreter will first expand (test 0 (p)) into a tree of primitives
