@@ -42,7 +42,12 @@ Now, the question is, given that:
 **Behavior on Applicative-Order Evaluation:**
 - Applicative-ordering will keep on digging the inner-most arguments.
 - In this case, (p) calls (p) calls (p) calls (p) ...
-- The function will be stuck on infinite recursive calls.
+- The function will be on **infinite recursive function calls**.
 
+**Behavior on Normal-Order Evaluation:**
+- The interpreter will first expand (test 0 (p)) into a tree of primitives
+- It will manage to detect first that x is equal to 0, then it will return to 0.
+- In this case, Normal-Order will actually avoid getting stuck on infinite recursive calls.
+- It's unclear though if the tree will keep on expanding, but let's stick to this solution.
 
 
