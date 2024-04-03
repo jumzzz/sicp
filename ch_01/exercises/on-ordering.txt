@@ -1,0 +1,2 @@
+- "Fully expand and reduce" => normal-order evaluation.
+- "Evaluate the arguments and apply" => applicative-order-evaluation.
