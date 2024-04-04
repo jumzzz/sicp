@@ -2,7 +2,7 @@
 
 ; Uses Relative Error instead
 ( define ( good-enough? guess y )
-  (< (/ ( abs (- ( square guess ) y )) y) 0.01))
+  (< (/ ( abs (- ( square guess ) y )) y) 0.001))
 
 ( define ( sqrt-iter guess y )
   ( if ( good-enough? guess y )
