@@ -36,6 +36,9 @@ def main():
     plt.style.use('ggplot')
     plt.plot(sequence, approx_fibs)
     plt.scatter(sequence, approx_fibs, marker='s', color='black', zorder=2)
+    plt.title('Exponential Growth of fib(n)')
+    plt.xlabel('n')
+    plt.ylabel('approx_fib(n)')
     plt.show()
 
 
