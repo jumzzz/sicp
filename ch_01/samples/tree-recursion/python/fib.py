@@ -27,8 +27,8 @@ def approx_fib(n: int):
     diff_ceil = ceil_approx - approx
     diff_floor = approx - floor_approx
 
-    if min(diff_ceil, diff_floor) == diff_floor:
-        return floor_approx
+#    if min(diff_ceil, diff_floor) == diff_floor:
+#        return floor_approx
     
     return ceil_approx
 
