@@ -4,7 +4,7 @@ import math
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('num', help='number of fibonacci sequence', type=int)
+    parser.add_argument('seq', help='Find fibonacci from sequence of number start:stop.')
 
     args = parser.parse_args()
     return args
@@ -14,7 +14,6 @@ def fib(n: int):
         return 0
     if n == 1:
         return 1
-    
     return fib(n - 1) + fib(n  - 2)
 
 def approx_fib(n: int):
@@ -24,24 +23,25 @@ def approx_fib(n: int):
     floor_approx = math.floor(approx)
     ceil_approx = math.floor(approx)
 
-    diff_ceil = ceil_approx - approx
-    diff_floor = approx - floor_approx
-
-#    if min(diff_ceil, diff_floor) == diff_floor:
-#        return floor_approx
-    
     return ceil_approx
 
+def parse_sequence(seq):
+    seq_pair = seq.split(':')
+    start = int(seq_pair[0])
+    stop = int(seq_pair[1])
+    return list(range(start, stop))
 
 def main():
     args = get_args()
-    num = args.num
-    res = fib(num)
-    approx_res = approx_fib(num)
+    seq_str = args.seq
+    seq = parse_sequence(seq)
+    total_seq = seq[-1]
     
-    print(f'fib({num}) = ', res)
-    print(f'apprx_fib({num}) = ', approx_res)
-
+    for num in seq:
+        res = fib(num)
+        approx_res = approx_fib(num)
+        print(f'[{num}/{total_seq}] fib({num}) = {res}, approx_fib({num}) = {approx_res}')
+    
 
 if __name__ == '__main__':
     main()
