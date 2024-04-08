@@ -43,6 +43,7 @@ def main():
     plt.figure(figsize=figsize)
     plt.style.use('ggplot')
     plt.plot(sequence, approx_fibs)
+    plt.scatter(sequence, approx_fibs, marker='s', color='black', zorder=2)
     plt.show()
 
 
