@@ -26,17 +26,24 @@ def approx_fib(n: int):
 
     return ceil_approx
 
-def parse_start_top(seq):
+def parse_start_stop(seq):
     seq_str = seq.split(':')
     return int(seq_str[0]), int(seq_str[1])
 
 def main():
     args = get_args()
-    args.seq
+    start, stop = parse_start_stop(args.seq)
+    
+    sequence = np.arange(start,stop)
+    ratio = (1 + 5 ** 0.5)/2.0
+    approx_fibs = ratio ** sequence
+    approx_fibs = approx_fibs / (5 ** 0.5)
     
     figsize = (7, 5)
     plt.figure(figsize=figsize)
-    
+    plt.style.use('ggplot')
+    plt.plot(sequence, approx_fibs)
+    plt.show()
 
 
 if __name__ == '__main__':
