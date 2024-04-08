@@ -34,7 +34,7 @@ def parse_sequence(seq):
 def main():
     args = get_args()
     seq_str = args.seq
-    seq = parse_sequence(seq)
+    seq = parse_sequence(seq_str)
     total_seq = seq[-1]
     
     for num in seq:
