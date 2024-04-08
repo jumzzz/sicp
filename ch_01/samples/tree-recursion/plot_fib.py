@@ -10,13 +10,6 @@ def get_args():
     args = parser.parse_args()
     return args
 
-def fib(n: int):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return fib(n - 1) + fib(n  - 2)
-
 def approx_fib(n: int):
     golden_ratio = (1 + 5**0.5)/2.0
     approx = golden_ratio ** n / (5 ** 0.5)
@@ -36,8 +29,7 @@ def main():
     
     sequence = np.arange(start,stop)
     ratio = (1 + 5 ** 0.5)/2.0
-    approx_fibs = ratio ** sequence
-    approx_fibs = approx_fibs / (5 ** 0.5)
+    approx_fibs = (ratio ** sequence) / (5 ** 0.5)
     
     figsize = (7, 5)
     plt.figure(figsize=figsize)
