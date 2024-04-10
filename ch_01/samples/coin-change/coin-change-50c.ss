@@ -1,4 +1,4 @@
-(define (count-change amount) (cc amount 3)) 
+(define (count-change amount) (cc amount 5)) 
 
 (define (cc amount kinds-of-coins)
   (cond ((= amount 0) 1)
@@ -8,7 +8,9 @@
 
 (define (first-denomination kinds-of-coins)
 (cond ((= kinds-of-coins 1) 1)      ; 1  cent = pennies 
-      ((= kinds-of-coins 2) 2)      ; 5  cent = nickels
-      ((= kinds-of-coins 3) 4)))     ; 10 cent = dimes
+      ((= kinds-of-coins 2) 5)      ; 5  cent = nickels
+      ((= kinds-of-coins 3) 10)     ; 10 cent = dimes
+      ((= kinds-of-coins 4) 25)     ; 25 cent = quarter
+      ((= kinds-of-coins 5) 50)))   ; 50 cent = half
 
 
